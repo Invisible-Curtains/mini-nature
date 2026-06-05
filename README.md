@@ -15,6 +15,7 @@ A professional website for Mini Nature, a garden café and plant nursery in Kath
 ## Built With
 - HTML5
 - CSS3
+- Java Script
 - GitHub Pages (free hosting)
 
 ## Note
