@@ -3,53 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Nature - Garden Café & Nursery</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- SEO -->
+    <title>Mini Nature — Garden Café & Nursery | Karyabinayak, Lalitpur</title>
+    <meta name="description" content="Mini Nature is a garden café and plant nursery in Karyabinayak, Lalitpur. Freshly brewed coffee surrounded by 50+ varieties of indoor and outdoor plants.">
+    <meta name="keywords" content="Mini Nature café, garden café Lalitpur, plant nursery Kathmandu, café Karyabinayak, coffee Nepal">
+    <meta name="author" content="Mini Nature">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mini Nature — Garden Café & Nursery">
+    <meta property="og:description" content="Where coffee meets nature. A garden café and plant nursery in Karyabinayak, Lalitpur.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Mini Nature</div>
-            <ul class="nav-links">
+            <a href="#home" class="logo">Mini Nature</a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#nursery">Nursery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#nursery">Nursery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Where Coffee Meets Nature</h1>
-            <p class="hero-subtitle">Garden Café & Plant Nursery in the heart of Kathmandu</p>
-            <a href="#menu" class="btn-primary">View Our Menu</a>
-            <a href="#nursery" class="btn-secondary">Explore Plants</a>
+        <div class="hero-content reveal">
+            <span class="hero-label">Garden Café & Plant Nursery</span>
+            <h1>Where Coffee<br>Meets Nature</h1>
+            <p class="hero-subtitle">Freshly brewed coffee surrounded by plants — in the heart of Karyabinayak, Lalitpur.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">View Our Menu</a>
+                <a href="#nursery" class="btn-secondary">Explore Plants</a>
+            </div>
         </div>
-        <!-- PHOTO 1: Hero background - replace images/hero.jpg tomorrow -->
         <div class="hero-image">
-            <img src="images/hero.jpg" alt="Mini Nature garden café">
+            <!-- Replace src with your actual hero photo -->
+            <img src="images/hero.jpg" alt="Mini Nature garden café interior" onerror="this.parentElement.classList.add('no-image')">
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-grid">
+            <div class="about-grid reveal">
                 <div class="about-text">
                     <span class="section-label">Our Story</span>
-                    <h2>A Green Oasis in the City</h2>
+                    <h2>A Green Oasis<br>in the City</h2>
                     <p>Mini Nature started as a small plant nursery and grew into something more. Today, we serve freshly brewed coffee surrounded by the plants we nurture. Every cup comes with a view of greenery.</p>
                     <p>Whether you're here for a quiet morning coffee or to find your next houseplant, Mini Nature is your escape from the city's chaos.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-num">50+</div>
+                            <div class="stat-label">Plant Varieties</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-num">6</div>
+                            <div class="stat-label">Days a Week</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-num">100%</div>
+                            <div class="stat-label">Fresh Brewed</div>
+                        </div>
+                    </div>
                 </div>
-                <!-- PHOTO 2: About section - replace images/about.jpg tomorrow -->
                 <div class="about-image">
-                    <img src="images/about.jpg" alt="Inside Mini Nature café">
+                    <!-- Replace src with your actual about photo -->
+                    <img src="images/about.jpg" alt="Inside Mini Nature café" onerror="this.parentElement.classList.add('no-image')">
                 </div>
             </div>
         </div>
@@ -58,11 +107,15 @@
     <!-- Menu Section -->
     <section id="menu" class="menu">
         <div class="container">
-            <span class="section-label">What We Serve</span>
-            <h2>Fresh from the Garden</h2>
-            
-            <div class="menu-grid">
+            <div class="menu-header reveal">
+                <span class="section-label">What We Serve</span>
+                <h2>Fresh from the Garden</h2>
+                <p class="menu-subtitle">Simple, honest ingredients — brewed and baked with care.</p>
+            </div>
+
+            <div class="menu-grid reveal">
                 <div class="menu-card">
+                    <div class="menu-card-icon">☕</div>
                     <h3>Specialty Coffee</h3>
                     <ul>
                         <li><span>Espresso</span><span>NPR 120</span></li>
@@ -72,6 +125,7 @@
                     </ul>
                 </div>
                 <div class="menu-card">
+                    <div class="menu-card-icon">🍵</div>
                     <h3>Teas & Refreshments</h3>
                     <ul>
                         <li><span>Green Tea</span><span>NPR 100</span></li>
@@ -81,6 +135,7 @@
                     </ul>
                 </div>
                 <div class="menu-card">
+                    <div class="menu-card-icon">🥐</div>
                     <h3>From the Bakery</h3>
                     <ul>
                         <li><span>Chocolate Brownie</span><span>NPR 150</span></li>
@@ -96,10 +151,10 @@
     <!-- Nursery Section -->
     <section id="nursery" class="nursery">
         <div class="container">
-            <div class="nursery-grid">
-                <!-- PHOTO 3: Nursery plants - replace images/nursery.jpg tomorrow -->
+            <div class="nursery-grid reveal">
                 <div class="nursery-image">
-                    <img src="images/nursery.jpg" alt="Plants at Mini Nature nursery">
+                    <!-- Replace src with your actual nursery photo -->
+                    <img src="images/nursery.jpg" alt="Plants at Mini Nature nursery" onerror="this.parentElement.classList.add('no-image')">
                 </div>
                 <div class="nursery-text">
                     <span class="section-label">The Nursery</span>
@@ -112,6 +167,7 @@
                         <li>Plant Care Supplies & Pots</li>
                     </ul>
                     <p class="nursery-note">Visit us to see the full collection — our inventory changes with the seasons.</p>
+                    <a href="#contact" class="btn-primary" style="margin-top: 28px; display: inline-block;">Visit Us</a>
                 </div>
             </div>
         </div>
@@ -120,37 +176,56 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <span class="section-label">Visit Us</span>
-            <h2>Come Say Hello</h2>
-            
-            <div class="contact-grid">
+            <div class="contact-header reveal">
+                <span class="section-label">Visit Us</span>
+                <h2>Come Say Hello</h2>
+            </div>
+
+            <div class="contact-grid reveal">
                 <div class="contact-info">
                     <div class="info-item">
-                        <h4>Location</h4>
-                        <p>Karyabinayak, Lalitpur</p>
-                        <p class="detail">M845+4FC, Karyabinayak 44700</p>
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Karyabinayak, Lalitpur</p>
+                            <p class="detail">M845+4FC, Karyabinayak 44700</p>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <h4>Hours</h4>
-                        <p>Mon – Sat: 7:00 AM – 7:00 PM</p>
-                        <p>Sunday: 8:00 AM – 5:00 PM</p>
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon – Sat: 7:00 AM – 7:00 PM</p>
+                            <p>Sunday: 8:00 AM – 5:00 PM</p>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <h4>Contact</h4>
-                        <p>Phone: +977 9840303193</p>
-                        
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Contact</h4>
+                            <p><a href="tel:+9779840303193">+977 9840303193</a></p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
+
+                <div class="contact-form-wrap">
                     <h4>Send a Message</h4>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your message..." rows="4" required></textarea>
-                        <button type="submit" class="btn-primary">Send Message</button>
+                    <form id="cafeContactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="cafe-name">Your Name</label>
+                            <input type="text" id="cafe-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafe-email">Email</label>
+                            <input type="email" id="cafe-email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafe-message">Message</label>
+                            <textarea id="cafe-message" name="message" placeholder="Your message..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" id="cafeSubmitBtn">Send Message</button>
                     </form>
-                    <p class="form-note">Powered by Formspree (free contact form)</p>
+                    <p class="form-note">We'll get back to you within 24 hours.</p>
                 </div>
             </div>
         </div>
@@ -159,10 +234,26 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Mini Nature Garden Café & Nursery. All rights reserved.</p>
-            <p class="footer-note">Website built with care</p>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">Mini Nature</div>
+                    <p>Garden Café & Plant Nursery<br>Karyabinayak, Lalitpur</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#nursery">Nursery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Mini Nature Garden Café & Nursery. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
